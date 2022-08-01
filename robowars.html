@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body{
+  font-family: Calibri, Helvetica, sans-serif;
+  background-color: #39FF14;
+}
+.container {
+    padding: 50px;
+  background-color: black;
+}
+
+input[type=text], input[type=password], textarea {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+input[type=text]:focus, input[type=password]:focus {
+ background-color: #FFFF99;
+  outline: none;
+}
+ div {
+            padding: 20px 0;
+         }
+hr {
+  border: 1px solid #39FF14;
+  margin-bottom: 25px;
+}
+.registerbtn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+.registerbtn:hover {
+  opacity: 1;
+}
+hr {
+  border: 1px solid #39FF14;
+  margin-bottom: 25px;
+}
+</style>
+
+
+</head>
+<body>
+<form>
+  <div class="container">
+  <center>  <h1 style="color:white;"> RoboWars Registration</h1> </center>
+  <hr>
+  <label style="color:white;"> Teamname </label> 
+<input type="text" name="teamname" placeholder= "Teamname" size="15" required /> 
+
+<div>
+<label style="color:white;"> 
+Bot Weight Category:
+</label> 
+<select>
+<option value="15 kg">15 kg</option>
+<option value="30 kg">30 kg</option>
+<option value="60 kg">60 kg</option>
+</select>
+</div>
+
+<div>
+<label style="color:white;"> Name of the Bot </label> 
+<input type="text" name="name of the bot" placeholder="Name of the Bot" size="15" required /> 
+</div>
+
+<hr>
+</hr>
+<div>
+<h2 style="color:white;">Team Leader Contact Info</h2>
+<label style="color:white;"> Team Leader Name </label>  
+<input type="text" name="team leader name" placeholder="Team Leader Name" size="15"required /> 
+
+
+<label style="color:white;">
+Phone
+</label>
+<input type="text" name="country code" placeholder="Country Code"  value="+91" size="2"/> 
+<input type="text" name="phone" placeholder="phone no." size="10"/ required> 
+
+<label style="color:white;">
+Email address 
+</label>
+<input type="text" name="email address" placeholder="email address." size="10"/ required> 
+</div>
