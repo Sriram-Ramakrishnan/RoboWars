@@ -67,7 +67,6 @@ hr {
 <label style="color:white;"> 
 Bot Weight Category:
 </label> 
-
 <select id="bw" required>
 <option value="15 kg">15 kg</option>
 <option value="30 kg">30 kg</option>
@@ -75,13 +74,14 @@ Bot Weight Category:
 </select>
 </center>
 </div>
-<center>
+
 <div>
+  <center>
 <label style="color:white; padding: 10%;"> Name of the Bot </label> 
 <input type="text" name="name of the bot" placeholder="Name of the Bot" id="botname" required /> 
-
-</div>
 </center>
+</div>
+
 
 <hr>
 </hr>
@@ -103,8 +103,15 @@ Phone
 <label style="color:white;">
 Email address 
 </label>
-<input type="text" name="email address" placeholder="Email address." id="email"/ required> 
 
+<input type="text" name="email address" placeholder="Email address." id="email"/ required> 
+<br>
+<label style="color:white;"> Previous Participant? </label>  
+<input type="radio" id="Yes" name="Yes" value="Yes">
+<label style="color: white;"for="Yes">Yes</label>
+<input type="radio" id="No" name="Yes" value="No">
+<label style="color: white;"for="No">No</label><br>
+<br>
 </div>
 <button id="Regbut" >Register</button>
 
@@ -140,18 +147,18 @@ const auth = firebaseConfig.auth();
         }
         else
         {
+          console.log("Creating var");
         let r=document.getElementById("teamn").value;
+        console.log(r);
         let g=document.getElementById("botname").value;
         let w=document.getElementById("teamln").value;
         let q=document.getElementById("phone").value;
         let s=document.getElementById("email").value;
-        let t=document.getElementById("bw");
+       let t=document.getElementById("bw");
         let wp=document.getElementById("bw").options[t.selectedIndex].text;
-        console.log(r);
-        if(r="")
-        {
-            document.getElementById("teamd").innerHTML="Please enter a Team Name!";
-        }
+        let rw = document.getElementById("Yes").value;  
+        console.log(rw);
+       
         db.collection('Registered')
             .add({
                 Team_Name:r,
@@ -159,7 +166,8 @@ const auth = firebaseConfig.auth();
                 Bot_Weight:wp,
                 Team_Leader_Name:w,
                 Phone_Number:q,
-                Email:s
+                Email:s,
+                
             })
             .then((docRef) => {
         console.log("Information Saved: ", docRef.id);
@@ -178,5 +186,8 @@ const auth = firebaseConfig.auth();
 }
 </script>
 </html>
+
+   
+
 
    
