@@ -31,6 +31,10 @@ body {
 	right: 50%;
   }
 
+  section img{
+	width: 100%;
+  }
+
 /*START OF Sponsors Page CSS*/
 hr{
 	border: 1px solid white;
@@ -195,3 +199,43 @@ header {
 	}
 
   }
+
+  @media (min-width: 434px) and (max-width: 767px){
+	.row {
+		padding: 30px;
+	}
+	section img{
+		width: 0%;
+		height: auto;
+	}
+	section p {
+		font-size: 1.2em;
+	}
+	section h2{
+		font-size: 1.4em;
+	}
+  }
+
+  @media (min-width: 992px) and (max-width: 1192px){
+	.ver {
+		height: 560px;
+	 }
+	
+	  }
+
+	@media (min-width: 768px) and (max-width: 991px){
+	.ver {
+		height: 500px;
+		}
+
+		}
+
+	@media (min-width: 434px) and (max-width: 767px){
+		.ver {
+			height: 1075px;
+			}
+		img {
+			width: 0%;
+			height: auto;
+		}
+			}
