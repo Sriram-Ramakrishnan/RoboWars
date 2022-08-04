@@ -4,6 +4,33 @@ body {
 	background-color: #22223B;
 }
 
+#abthdr {
+	font-family: sans-serif;
+	font-weight: 700;
+	color: rgb(251, 251, 156);
+  }
+  .content {
+	font-family: sans-serif;
+	font-weight: 500;
+	color: rgb(241, 239, 239);
+  }
+  h2 {
+	font-family: sans-serif;
+	font-weight: 600;
+	color: rgb(251, 251, 156);
+  }
+  #link {
+	font-family: sans-serif;
+	font-weight: 500;
+	color: white;
+	font-size: medium;
+  }
+  #Orcus {
+	position: relative;
+	left: 0%;
+	right: 50%;
+  }
+
 /*START OF Sponsors Page CSS*/
 hr{
 	border: 1px solid white;
@@ -40,7 +67,9 @@ h1,h3
 .ver {
      border-left: 3px solid black;
      margin-left: 20px;
-	 height: 200px;
+	 margin-top: 20px;
+	 margin-bottom: 30px;
+	 height: 650px;
 	 position: relative;
   }
 
@@ -49,10 +78,10 @@ h1,h3
 }
 
 .socialmedia img {
-	width: 25px;
-	height: 25px;
+	width: 30px;
+	height: 30px;
 	margin: 10px;	
-	margin-bottom: 30px;
+	margin-bottom: 40px;
 }
 
 
