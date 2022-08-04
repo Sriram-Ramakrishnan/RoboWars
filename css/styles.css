@@ -15,7 +15,14 @@ hr{
 	margin-inline-end: auto;
 	width: 80%;
 }
-
+#myVideo {
+	position:relative;
+	right: 0;
+	bottom: 0;
+	min-width: 100%;
+	min-height: 100%;
+	max-width: 100%;
+  }
 h1,h3
 {
 	color: white;
