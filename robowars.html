@@ -3,6 +3,8 @@
 <head>
     <title>Robowars Form</title>
 <meta charset='utf-8' name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<script src="js/jquery-2.1.4.min.js"></script>
 <style>
 body{
   font-family: Calibri, Helvetica, sans-serif;
@@ -49,6 +51,22 @@ hr {
   border: 1px solid #142fff;
   margin-bottom: 25px;
 }
+
+.img_upload {
+  position: relative;
+}
+#uploadbut {
+  position: absolute;
+  bottom:50%;
+  right: 50%;
+  transform: translate(50%, 50%);
+}
+
+#img_plceholder{
+  width: 300px;
+  max-height: 300px;
+
+}
 </style>
 
 
@@ -56,33 +74,53 @@ hr {
 <body>
 
   <div class="container">
+    
   <center>  <h1 style="color:white;"> RoboWars Registration</h1> </center>
   <hr>
- <center> <label style="color:white;"> Teamname </label> </center>
-<input type="text" name="teamname" placeholder= "Teamname" id="teamn" required /> 
-
-
+  <div class="col-md-6">
+      <center> <label style="color:white;"> Teamname </label> </center>
+      <input type="text" name="teamname" placeholder= "Teamname" id="teamn" required /> 
+      <div>
+        <center>
+        <label style="color:white;"> 
+        Bot Weight Category:
+        </label> 
+        <select id="bw" required>
+        <option value="15 kg">15 kg</option>
+        <option value="30 kg">30 kg</option>
+        <option value="60 kg">60 kg</option>
+        </select>
+        </center>
+      </div>
+    
 <div>
-    <center>
-<label style="color:white;"> 
-Bot Weight Category:
-</label> 
-<select id="bw" required>
-<option value="15 kg">15 kg</option>
-<option value="30 kg">30 kg</option>
-<option value="60 kg">60 kg</option>
-</select>
-</center>
-</div>
-
-<div>
-  <center>
+<center>
 <label style="color:white; padding: 10%;"> Name of the Bot </label> 
 <input type="text" name="name of the bot" placeholder="Name of the Bot" id="botname" required /> 
 </center>
 </div>
+</div>
 
+<div class="col-md-6 img_upload">
+  <center> <label style="color:white;"> Image of the Bot </label> </center>
+  <div style="height: 370px; border: 1px solid white;">
+    <center>
+    <input type="file"  accept="image/*" name="image of the bot" id="botimage"  onchange="loadFile(event)" style="display: none;" >
+    <label for="botimage" id="uploadbut" style="cursor: pointer;">Upload Image</label>
+    <img id="img_plceholder" />
+  </center>
+    <script>
+    var loadFile = function(event) {
+      var image = document.getElementById('img_plceholder');
+      image.src = URL.createObjectURL(event.target.files[0]);
+      console.log(image.src);
+      $("#uploadbut").css({'bottom': '10%'}); 
+    };
+    </script>
+  </div>
+</div>
 
+<div class="col-md-12">
 <hr>
 </hr>
 <center>
@@ -116,6 +154,7 @@ Email address
 
 </center>
 </div>
+</div>
 
 </body>
 <script src="https://www.gstatic.com/firebasejs/9.6.7/firebase-app-compat.js"></script>
@@ -133,12 +172,11 @@ const firebaseConfig = firebase.initializeApp({
     measurementId: "G-YZKCRQYNY6"
   });
   const db = firebaseConfig.firestore();
-const auth = firebaseConfig.auth();
-
+  const auth = firebaseConfig.auth();
 
     document.getElementById("Regbut").onclick=function()
     {
-        if(document.getElementById("email").value=="" || document.getElementById("botname").value=="" || document.getElementById("teamln").value=="" || document.getElementById("phone").value=="" ||
+        if(document.getElementById("email").value=="" || document.getElementById("botname").value=="" || document.getElementById("botimage").value=="" ||document.getElementById("teamln").value=="" || document.getElementById("phone").value=="" ||
     document.getElementById("teamn").value=="")
         {
             alert("Please enter all the values!");
@@ -146,14 +184,14 @@ const auth = firebaseConfig.auth();
         }
         else
         {
-          console.log("Creating var");
+        console.log("Creating var");
         let r=document.getElementById("teamn").value;
         console.log(r);
         let g=document.getElementById("botname").value;
         let w=document.getElementById("teamln").value;
         let q=document.getElementById("phone").value;
         let s=document.getElementById("email").value;
-       let t=document.getElementById("bw");
+        let t=document.getElementById("bw");
         let wp=document.getElementById("bw").options[t.selectedIndex].text;
         let rw =document.querySelector('input[name="Yes"]:checked').value;
         console.log(rw);

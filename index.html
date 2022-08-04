@@ -11,7 +11,7 @@
     <link href='https://fonts.googleapis.com/css?family=Lora' rel='stylesheet' type='text/css'>
   </head>
 <body>
-<!-- Insert Nav Bar Here -->
+<div style="margin-top: -100px;"></div>
 <video autoplay muted loop id="myVideo">
   <source src="Robo.mp4" type="video/mp4">
 </video>
@@ -20,23 +20,23 @@
 	<div class="container" id="trapezoid">
            <ul id="nav-list" class="nav navbar-nav">
             <li class="row1">
-              <a href="#myVideo" class="expandHome">Home </a>
+              <a href="#myVideo">Home </a>
             </li>
             <li class="row1">
-              <a href="#About" class="expandHome">About </a>
+              <a href="#About">About </a>
             </li>
             <li class="row1">
-              <a href="Registrationform.html" class="expandHome" target="_blank"> Registration </a>
+              <a href="robowars.html" target="_blank"> Registration </a>
             </li>
             <span id="clr"></span>
             <li class="row2">
-              <a href="Rules.html" class="expandHome">Rules </a>
+              <a href="Rules.html" target="_blank">Rules </a>
             </li>
             <li class="row2">
-               <a href="#Eligibility" class="expandHome">Eligibility</a>
+               <a href="#Eligibility">Eligibility</a>
             </li>
             <li class="row2">
-              <a href="#Sponsors" class="expandHome">Sponsors</a>
+              <a href="#Sponsors">Sponsors</a>
             </li>
           </ul><!-- #nav-list -->
 
@@ -62,32 +62,96 @@
 
       <div class="col-xs-11" id="main-content">
 <!-- START of Content-->
+          <div class="row" id="About">
+            <h1 id="abthdr" class="text-center">RoboWars</h1>
+            <div class="col-sm-12" style="margin-bottom: 50px;"></div>
+            <section class="col-sm-4">
+              <img src="./images/aboutRoboWars.jpg" alt="RoboWars Logo" style="width: 100%;"/>
+            </section>
+            <section class="col-sm-8">
+              <h2>About the Event</h2>
+              <p class="content">
+                Robowars, the flagship event of Gravitas, is a Robot Combat Competition
+                where participants from around the globe battle each other for the coveted
+                Robowars Champion Title. Witness sparks fly as metal crushes metal in the
+                most glorious battles interspersed with magnificent artist performances
+                for non-stop entertainment.
+              </p>
+            </section>
+            <div class="col-sm-12" style="margin-bottom: 50px;"></div>
+            <section class="col-sm-4">
+              <img src="./images/Orcus.jfif" alt="Team Orcus" id="Orcus" style="width: 100%;"/>
+            </section>
+            <section class="col-sm-8">
+              <h2>Team Orcus</h2>
+              <p class="content">
+                Team Orcus is the Combat Robotics division of RoboVITics. They
+          independently design and manufacture their bots right from scratch.
+          Founded in 2016, Team Orcus has participated in several competitions, both
+          at the national and international level and has seldom returned
+          empty-handed. It is founded on the principles of authenticity,
+          originality, dedication and perseverance. Catalyzed by its principles,
+          Orcus has risen to be ranked 6<sup>th</sup> worldwide among all combat
+          robotics team by IIT Bombay's Techfest, just one of their many
+          achievements. Visit
+          <i><a
+            href="https://paarth2608.github.io/Robovitics_website_new/#orcus-page"
+            id="link"
+            >teamorcus.in</a
+          ></i>
+          to get inspired and know more about them.
+              </p>
+            </section>
+            <div class="col-sm-12" style="margin-bottom: 50px;"></div>
+            <section class="col-sm-4">
+              <img src="./images/RoboVITics.jfif" alt="RoboWars Logo" style="width: 100%;"/>
+            </section>
+            <section class="col-sm-8">
+              <h2> About Us: RoboVITics</h2>
+              <p class="content">
+                RoboVITics is a group of tech-enthusiasts with a common goal of learning
+                to be the best. It is the official Robotics Club of VIT Vellore. The
+                mission of the club is to encourage budding roboticists by enabling them
+                to build projects and discover their niche by providing hands on
+                workshops, seminars and practical sessions. We are working on some
+                ground-breaking projects under the guidance and nurture of a glorious team
+                with great experiences.
+              </p>
+            </section>
+          </div>
+
           <div id="Sponsors"> <!--Sponsors -->
-            <center>
-              <div style="padding-top:2% ;">
-              <h1><b>Our Partners</b></h1>
-              </div>
-            </center>
-            <center>
-            <div>
-              <h3><i>Our various partners which are an integral part in successfully carrying out RoboWars</i></h3>
-            </div>
-            </center>
-            <hr>
-            <center>
-            <div style="padding: 10%;">
-            <a href="https://www.autodesk.in/" target="_blank" class="col-md-6"><img src="Sponsors-icons/autodesklogo1.webp" style="width: 100%; height:100%; padding: 10%; display: inline;"/></a>
-            <a href="https://www.digitalocean.com/" target="_blank" class="col-md-6"> <img src="Sponsors-icons/digitalocean logo.png" style="width: 100%; height:100%; padding: 10%; display: inline;"></a>
-            <a href="https://www.larsentoubro.com/" target="_blank" class="col-md-6"> <img src="Sponsors-icons/l-and-t-logo.png" style="width: 50%; height:50%; padding: 10%; display: inline;"></a>
-            </div>
-            <div>
-            <a href="https://www.se.com/in/en/" target="_blank" class="col-md-6"><img src="Sponsors-icons/schneider_electric-white-logo-1.png" style="width: 100%; height:100%; padding: 10%; display: inline;"/></a>
-            <a href="https://new.siemens.com/in/en.html" target="_blank" class="col-md-6"><img src="Sponsors-icons/siemens-logo.png" style="width: 70%; height:70%; padding: 10%; display: inline;"/></a>
-            <a href="https://www.ti.com/" target="_blank" class="col-md-6"><img src="Sponsors-icons/ti.png" style="width: 90%; height:90%; padding: 10%; display: inline;"/></a>
-            </div>
-  
-            </center>
+                  <center>
+                    <div style="padding-top:2% ;">
+                    <h1><b>Our Partners</b></h1>
+                    </div>
+                  </center>
+                  <center>
+                  <div>
+                    <h3><i>Our various partners which are an integral part in successfully carrying out RoboWars</i></h3>
+                  </div>
+                  </center>
+                  <hr>
+                  <center>
+                  <div style="padding: 10%;">
+                  <a href="https://www.autodesk.in/" target="_blank" class="col-md-6"><img src="Sponsors-icons/autodesklogo1.webp" style="width: 100%; height:100%; padding: 10%; display: inline;"/></a>
+                  <a href="https://www.digitalocean.com/" target="_blank" class="col-md-6"> <img src="Sponsors-icons/digitalocean logo.png" style="width: 100%; height:100%; padding: 10%; display: inline;"></a>
+                  <a href="https://www.larsentoubro.com/" target="_blank" class="col-md-6"> <img src="Sponsors-icons/l-and-t-logo.png" style="width: 50%; height:50%; padding: 10%; display: inline;"></a>
+                  </div>
+                  <div>
+                  <a href="https://www.se.com/in/en/" target="_blank" class="col-md-6"><img src="Sponsors-icons/schneider_electric-white-logo-1.png" style="width: 100%; height:100%; padding: 10%; display: inline;"/></a>
+                  <a href="https://new.siemens.com/in/en.html" target="_blank" class="col-md-6"><img src="Sponsors-icons/siemens-logo.png" style="width: 70%; height:70%; padding: 10%; display: inline;"/></a>
+                  <a href="https://www.ti.com/" target="_blank" class="col-md-6"><img src="Sponsors-icons/ti.png" style="width: 90%; height:90%; padding: 10%; display: inline;"/></a>
+                  </div>
+
+                  </center>
           </div> <!--Sponsors -->
+          <h3>
+            <a href="#Top" id="link">
+              <button type="submit" style="display: none;"></button>
+              <label for="link" style="cursor: pointer;"> Back to Top </label> 
+            </a>
+          </h3>
       </div>
 
     </div>
